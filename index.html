@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tidimalo's Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Header Section -->
+    <header class="header">
+      <nav class="navbar">
+        <ul class="nav-links">
+          <li>
+            <a href="javascript:void(0);" onclick="showSection('home')">Home</a>
+          </li>
+          <li>
+            <a href="javascript:void(0);" onclick="showSection('about')"
+              >About</a
+            >
+          </li>
+          <li>
+            <a href="javascript:void(0);" onclick="showSection('projects')"
+              >Projects</a
+            >
+          </li>
+          <li>
+            <a href="javascript:void(0);" onclick="showSection('contact')"
+              >Contact</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Sections -->
+    <section id="home" class="content-section">
+      <img src="Images/women-in-tech.png" />
+      <h1>Tidimalo Motsepe</h1>
+      <p>Cloud & Software Developer | IT Specialist</p>
+    </section>
+
+    <section id="about" class="content-section">
+      <h2>About Me</h2>
+      <p>
+        Hello! I’m <strong>Tidimalo Motsepe</strong>, a Cloud & Software
+        Developer.
+      </p>
+      <p>
+        I hold a <strong>Diploma in Information Technology</strong> from the
+        <strong>Vaal University of Technology (VUT)</strong>, with a focus on
+        <strong>Information Systems</strong>.
+      </p>
+      <p>
+        I am certified in <strong>AZ-204: Microsoft Azure</strong> and
+        <strong>CyberOps Associate</strong>.
+      </p>
+      <p>
+        My expertise is in <strong>cloud computing</strong>, specifically with
+        <strong>Azure</strong> and <strong>AWS</strong>.
+      </p>
+      <p>
+        I’m passionate about solving complex challenges and continuously
+        learning in the tech field.
+      </p>
+    </section>
+
+    <section id="projects" class="content-section">
+      <h2>My Projects</h2>
+       
+    <ul style="list-style-type: none; padding: 0;">
+        <li style="margin-bottom: 15px;">
+            <strong>Weather Forecasting System</strong><br>
+            A web-based application that provides real-time weather updates for any city using the OpenWeatherMap API.
+        </li>
+        <li style="margin-bottom: 15px;">
+            <strong>Online Shopping System</strong><br>
+            A simple e-commerce website that allows users to browse products, add them to the cart, and see the total price of items in the cart.
+        </li>
+        <li style="margin-bottom: 15px;">
+            <strong>Library Management System</strong><br>
+            A web application for managing books in a library, allowing users to add new books, view existing ones, and remove books from the collection.
+        </li>
+    </ul>
+</section>
+
+      </p>
+    </section>
+
+    <section id="contact" class="content-section">
+      <h2>Contact Me</h2>
+      <p>Email: tidimalomadikana01@gmail.com</p>
+    </section>
+
+    <script>
+      // Function to show and hide content sections
+      function showSection(sectionId) {
+        // Hide all sections
+        const sections = document.querySelectorAll(".content-section");
+        sections.forEach((section) => {
+          section.style.display = "none";
+        });
+
+        // Show the clicked section
+        const sectionToShow = document.getElementById(sectionId);
+        sectionToShow.style.display = "block";
+
+        // Smooth scroll to the section (added for user experience)
+        sectionToShow.scrollIntoView({ behavior: "smooth" });
+      }
+
+      // Initially show the home section
+      showSection("home");
+    </script>
+  </body>
+</html>
