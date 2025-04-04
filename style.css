@@ -1,11 +1,17 @@
-/* Reset styles */
-* {
+/* Basic Reset for body and html */
+html,
+body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  scroll-behavior: smooth;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
+/* Main content section - to ensure it fills remaining space */
+.content-wrapper {
+  flex: 1; /* Ensure the content takes up the remaining space */
+}
 body {
   font-family: Arial, sans-serif;
   background: url("images/background.jpg") no-repeat center center/cover;
@@ -124,32 +130,83 @@ p {
   font-size: 1rem;
   color: #555;
 }
+
+/* Footer Styling */
 .footer {
-  color: #fff;
-  text-align: center;
+  background-color: #333;
+  color: white;
   padding: 20px;
-  margin-top: 40px;
-  font-size: 14px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  text-align: center;
+  font-size: 1rem;
+  position: fixed; /* Make the footer fixed */
+  bottom: 0; /* Align it at the bottom */
+  left: 0;
+  width: 100%; /* Take full width */
+  z-index: 100;
+}
+/* Styling for the copyright text */
+.footer p {
+  color: white; /* Ensure text is white */
+  margin: 0; /* Removes any default margin */
+  font-size: 1rem; /* Adjust font size */
+  line-height: 1.5; /* Adds some spacing between lines */
+  text-align: center; /* Center the text */
 }
 
+/* Styling for social links */
 .footer .social-icons {
   margin-top: 10px;
 }
 
-.footer .social-icons a {
-  color: #ffd700;
+.footer a {
+  color: white;
   text-decoration: none;
   margin: 0 10px;
-  transition: color 0.3s ease;
+  font-size: 1.1rem;
 }
 
-.footer .social-icons a:hover {
-  color: #ffffff;
+/* Hover effect for social links */
+.footer a:hover {
+  color: #1a73e8;
 }
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .footer {
+    font-size: 0.9rem;
+  }
+
+  .footer a {
+    font-size: 1rem;
+  }
+
+  .footer .social-icons {
+    margin-top: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    font-size: 0.8rem;
+  }
+
+  .footer a {
+    font-size: 0.9rem;
+    margin: 0 5px;
+  }
+
+  .footer .social-icons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  .footer .social-icons a {
+    margin-bottom: 5px;
+  }
+}
+
 /* Style for the Skills section */
 #skills {
   background-color: #f4f4f4; /* Soft background color */
