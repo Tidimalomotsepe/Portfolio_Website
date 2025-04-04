@@ -410,3 +410,66 @@ p {
     font-size: 0.9rem;
   }
 }
+
+@media screen and(max-width: 950px) {
+  .contact-section {
+    flex-direction: column;
+  }
+  .contact-info,
+  .contact-form {
+    margin: 30px 50px;
+  }
+  .contact-form h1 {
+    font-size: 30px;
+  }
+  .contact-form .text-box {
+    width: 100%;
+  }
+}
+
+/* Styles for screens up to 320px */
+@media (max-width: 320px) {
+  body {
+    font-size: 14px;
+  }
+
+  .text-box,
+  textarea {
+    padding: 5px;
+  }
+
+  .text-box,
+  textarea {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    padding: 20px;
+  }
+  form {
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .div1 {
+    display: block;
+  }
+  .box2 {
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+@media (max-width: 700px) {
+  .footerNav ul {
+    flex-direction: column;
+  }
+  .footerNav ul li {
+    width: 100%;
+    text-align: center;
+    margin: 10px;
+  }
+}
