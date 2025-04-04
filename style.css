@@ -6,6 +6,7 @@ body {
   height: 100%;
   display: flex;
   flex-direction: column;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 /* Main content section - to ensure it fills remaining space */
@@ -13,16 +14,17 @@ body {
   flex: 1; /* Ensure the content takes up the remaining space */
 }
 
+/* Body Styling */
 body {
   font-family: Arial, sans-serif;
   color: rgb(17, 16, 16);
-  background-size: cover; /* Make sure the image covers the entire screen */
-  background-position: center center; /* Center the background */
-  background-repeat: no-repeat; /* Prevent repeating the image */
-  background-attachment: scroll; /* Allow scrolling background on mobile */
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
   display: flex;
-  flex-direction: column; /* Ensures content follows a column layout */
-  justify-content: flex-start; /* Align content to the top */
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 /* Navigation Bar */
@@ -118,8 +120,6 @@ section {
   margin: 20px;
   border-radius: 10px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  display: block;
-  margin-top: 40px;
 }
 
 /* Footer Styling */
@@ -129,22 +129,21 @@ section {
   padding: 20px;
   text-align: center;
   font-size: 1rem;
-  position: fixed; /* Make the footer fixed */
-  bottom: 0; /* Align it at the bottom */
+  position: fixed;
+  bottom: 0;
   left: 0;
-  width: 100%; /* Take full width */
+  width: 100%;
   z-index: 100;
 }
 
 .footer p {
-  color: white; /* Ensure text is white */
-  margin: 0; /* Removes any default margin */
-  font-size: 1rem; /* Adjust font size */
-  line-height: 1.5; /* Adds some spacing between lines */
-  text-align: center; /* Center the text */
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.5;
+  text-align: center;
 }
 
-/* Styling for social links */
+/* Social Links in Footer */
 .footer .social-icons {
   margin-top: 10px;
 }
@@ -156,7 +155,6 @@ section {
   font-size: 1.1rem;
 }
 
-/* Hover effect for social links */
 .footer a:hover {
   color: #1a73e8;
 }
@@ -198,9 +196,9 @@ section {
   }
 }
 
-/* Style for the Skills section */
+/* Skills Section */
 #skills {
-  background-color: #f4f4f4; /* Soft background color */
+  background-color: #f4f4f4;
   padding: 50px 0;
   text-align: center;
 }
@@ -237,7 +235,7 @@ section {
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
 }
 
-/* Mobile Responsiveness */
+/* Mobile Responsiveness for Skills */
 @media (max-width: 768px) {
   #skills h2 {
     font-size: 2rem;
@@ -258,19 +256,11 @@ section {
   }
 }
 
-/* Style for the content sections */
-.content-section {
-  padding: 50px 20px;
-  margin-bottom: 40px;
-  text-align: center;
-}
-
 /* About Section Styling */
 #about {
-  background-color: #fff; /* Light background for about section */
-  color: #333; /* Text color */
+  background-color: #fff;
+  color: #333;
   padding: 50px 20px;
-  margin-bottom: 40px;
 }
 
 #about h2 {
@@ -293,7 +283,7 @@ section {
 
 /* Projects Section Styling */
 #projects {
-  background-color: #f4f4f4; /* Soft background color */
+  background-color: #f4f4f4;
   padding: 50px 0;
 }
 
@@ -327,7 +317,7 @@ section {
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
 }
 
-/* Mobile Responsiveness */
+/* Mobile Responsiveness for Projects */
 @media (max-width: 768px) {
   #about h2,
   #projects h2 {
@@ -358,27 +348,39 @@ section {
   }
 }
 
-/* Mobile Responsiveness for smaller screens */
-@media screen and (max-width: 950px) {
-  .contact-section {
-    flex-direction: column;
-  }
-  .contact-info {
-    margin-bottom: 20px;
-  }
-}
-/* Ensure html and body take full height */
-html,
-body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  overflow-x: hidden;
+/* Footer Social Icons and Copyright */
+.icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px; /* Adjust space between icons */
 }
 
-/* Fullscreen background that covers the entire viewport on all devices */
+.icon-container .icon {
+  width: 50px;
+  height: 50px;
+  margin: 10px;
+  flex-shrink: 0;
+}
+
+@media only screen and (max-width: 768px) {
+  .icon-container {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+/* Copyright Styling */
+.copyright {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.8);
+  margin-top: 10px;
+}
+
+/* Fullscreen background */
 .background {
-  position: fixed; /* Use fixed to stay in place during scroll */
+  position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
@@ -395,46 +397,4 @@ body {
   100% {
     transform: rotate(360deg);
   }
-}
-
-.copyright {
-  font-size: 14px;
-  color: rgba(255, 255, 255, 0.8);
-  margin-top: 10px; /* Ensures spacing from icons */
-}
-.footer-container {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background-color: #222; /* Dark background for better visibility */
-  padding: 20px 0; /* More padding to extend coverage */
-  text-align: center;
-}
-
-.social-icons {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 40px; /* Increased space between icons */
-  flex-wrap: wrap;
-  margin-bottom: 20px; /* Space between icons and copyright */
-}
-
-.social-icons a {
-  color: white;
-  font-size: 28px;
-  transition: transform 0.3s ease, color 0.3s ease;
-  text-decoration: none;
-}
-
-.social-icons a:hover {
-  transform: scale(1.2);
-  color: #63e;
-}
-
-.copyright {
-  font-size: 14px;
-  color: rgba(255, 255, 255, 0.8);
-  margin-top: 5px;
 }
